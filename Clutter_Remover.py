@@ -77,8 +77,10 @@ for i in list_files:
 
     else:
         cwd=os.getcwd()
+        
         dir = os.path.join(cwd,"Other_files")
-        if('Audio_Files' in os.listdir()):
+        if (('.' in i) and (not 'Clutter' in i)):
+            print(i)
             if not os.path.exists(dir):
                 os.mkdir(dir)
             shutil.move(i,dir)
