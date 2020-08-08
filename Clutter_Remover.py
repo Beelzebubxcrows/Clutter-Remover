@@ -25,7 +25,7 @@ for i in list_files:
             os.mkdir(dir)
         shutil.move(i,dir)
 
-    elif('.exe' in i):
+    elif('.exe' in i) and (not 'Clutter' in i):
         cwd=os.getcwd()
         dir = os.path.join(cwd,"Applications")
         if not os.path.exists(dir):
